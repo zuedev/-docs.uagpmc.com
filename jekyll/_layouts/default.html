@@ -62,8 +62,8 @@
       <div>
         <a href="/">Home</a>
         <a href="/guides/setup">Setup</a>
-        <a href="/roles/">Roles</a>
-        <a href="/staff/">Staff</a>
+        <a href="/roles/" disabled>Roles</a>
+        <a href="/staff/" disabled>Staff</a>
       </div>
       <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
     </nav>
@@ -86,6 +86,16 @@
       const repoEditPath = `https://github.com/UnnamedArmaGroupHub/docs.uagpmc.com/edit/main/jekyll`;
       const editLink = `<a href="${repoEditPath}${path}.md" target="_blank">Edit on GitHub</a>`;
       editOnRepo.innerHTML = editLink;
+
+      const navLinks = document.querySelectorAll("nav a");
+      navLinks.forEach((link) => {
+        if (link.getAttribute("disabled") !== null) {
+          link.removeAttribute("href");
+          link.style.color = "gray";
+          link.style.cursor = "not-allowed";
+          link.title = "Coming soon...";
+        }
+      });
     });
 
     window.toggleDarkMode = () => {
