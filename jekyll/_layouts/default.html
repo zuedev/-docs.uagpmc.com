@@ -20,18 +20,62 @@
         padding: 1rem;
         max-width: 512px;
       }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 1rem;
+      }
+
+      main {
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
+      }
+
+      footer {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 1rem;
+      }
+
+      footer span {
+        width: 50%;
+      }
+
+      footer span:nth-child(1) {
+        text-align: left;
+      }
+
+      footer span:nth-child(2) {
+        text-align: right;
+      }
     </style>
   </head>
   <body>
-    {{ content }}
+    <nav>
+      <a href="/">Home</a>
+      <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    </nav>
+    <main>{{ content }}</main>
+    <footer>
+      <span></span>
+      <span id="editOnRepo"></span>
+    </footer>
   </body>
   <script type="module">
     import DarkReader from "https://cdn.skypack.dev/darkreader";
 
     document.addEventListener("DOMContentLoaded", () => {
       DarkReader.setFetchMethod(window.fetch);
-
       DarkReader.auto();
+
+      const editOnRepo = document.getElementById("editOnRepo");
+      let path = window.location.pathname;
+      if (path.endsWith("/")) path += "README";
+      const repoEditPath = `https://github.com/UnnamedArmaGroupHub/docs.uagpmc.com/edit/main/jekyll`;
+      const editLink = `<a href="${repoEditPath}${path}.md" target="_blank">Edit on GitHub</a>`;
+      editOnRepo.innerHTML = editLink;
     });
 
     window.toggleDarkMode = () => {

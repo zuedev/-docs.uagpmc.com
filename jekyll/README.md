@@ -1,4 +1,4 @@
-<img src="/assets/yeet21.png" height="64px" />
+<img src="/assets/yeet21.png" height="100px" />
 
 # UAG Documentation
 
