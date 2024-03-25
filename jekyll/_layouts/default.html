@@ -51,11 +51,20 @@
       footer span:nth-child(2) {
         text-align: right;
       }
+
+      img {
+        max-width: 100%;
+      }
     </style>
   </head>
   <body>
     <nav>
-      <a href="/">Home</a>
+      <div>
+        <a href="/">Home</a>
+        <a href="/guides/setup">Setup</a>
+        <a href="/roles/">Roles</a>
+        <a href="/staff/">Staff</a>
+      </div>
       <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
     </nav>
     <main>{{ content }}</main>
