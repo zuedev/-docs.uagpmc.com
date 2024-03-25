@@ -1,0 +1,6 @@
+plugins:
+  - jekyll-default-layout
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+include:
+  - README.md

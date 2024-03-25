@@ -1,0 +1,13 @@
+source "https://rubygems.org"
+
+gem "jekyll", "~> 4.3.3"
+
+gem 'github-pages-unscramble', group: :jekyll_plugins
+
+gem 'jekyll-default-layout'
+
+group :jekyll_plugins do
+  gem 'jekyll-optional-front-matter'
+end
+
+gem "jekyll-readme-index"
