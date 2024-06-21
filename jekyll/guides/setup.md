@@ -26,7 +26,7 @@ The modpack requires the following DLCs to be installed:
 - [Arma 3 Creator DLC: Western Sahara](https://store.steampowered.com/app/1681170/Arma_3_Creator_DLC_Western_Sahara/)
 - [Arma 3 Creator DLC: Reaction Forces](https://store.steampowered.com/app/2647760/Arma_3_Creator_DLC_Reaction_Forces/)
 
-**If you don't have these DLCs, you will need to load the **compatibility data mods** for them:**
+If you don't have these DLCs, you will need to load the **compatibility data mods** for them:
 
 - [Global Mobilization - Cold War Germany Compatibility Data](https://steamcommunity.com/sharedfiles/filedetails/?id=1776428269)
 - [Western Sahara Compatibility Data](https://steamcommunity.com/sharedfiles/filedetails/?id=2636962953)
