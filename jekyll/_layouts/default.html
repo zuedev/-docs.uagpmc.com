@@ -84,7 +84,7 @@
       const editOnRepo = document.getElementById("editOnRepo");
       let path = window.location.pathname;
       if (path.endsWith("/")) path += "README";
-      const repoEditPath = `https://github.com/UnnamedArmaGroupHub/docs.uagpmc.com/edit/main/jekyll`;
+      const repoEditPath = `https://github.com/uagpmc/docs.uagpmc.com/edit/main/jekyll`;
       const editLink = `<a href="${repoEditPath}${path}.md" target="_blank">Edit on GitHub</a>`;
       editOnRepo.innerHTML = editLink;
 
